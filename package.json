@@ -1,80 +1,104 @@
 {
-  "name": "sails-mongo",
-<<<<<<< HEAD
-  "version": "1.0.0-11",
-  "description": "Mongo DB adapter for Sails.js/Waterline.",
-  "main": "./lib",
-=======
-  "version": "0.12.3",
-  "description": "Mongo DB adapter for Sails.js",
-  "main": "./lib/adapter.js",
->>>>>>> fca63b2c073aa037cc24d6c757e3c1978677113a
-  "scripts": {
-    "test": "npm run lint && npm run custom-tests",
-    "custom-tests": "node ./node_modules/mocha/bin/mocha test/run-adapter-specific-tests && node ./node_modules/mocha/bin/mocha test/connectable/ && node test/run-standard-tests",
-    "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0",
-    "docker": "docker-compose run adapter bash"
+  "_args": [
+    [
+      "sails-mongo@0.12.2",
+      "/Users/sterlingrules/www/radplaid-api/radplaid-api"
+    ]
+  ],
+  "_from": "sails-mongo@0.12.2",
+  "_id": "sails-mongo@0.12.2",
+  "_inBundle": false,
+  "_integrity": "sha1-R1ueUI04D4eHoOax3+u9YH9PZuM=",
+  "_location": "/sails-mongo",
+  "_phantomChildren": {
+    "core-util-is": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
+    "inherits": "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz",
+    "mongodb-core": "1.3.20"
   },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "sails-mongo@0.12.2",
+    "name": "sails-mongo",
+    "escapedName": "sails-mongo",
+    "rawSpec": "0.12.2",
+    "saveSpec": null,
+    "fetchSpec": "0.12.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/sails-mongo/-/sails-mongo-0.12.2.tgz",
+  "_spec": "0.12.2",
+  "_where": "/Users/sterlingrules/www/radplaid-api/radplaid-api",
+  "bugs": {
+    "url": "https://github.com/balderdashy/sails-mongo/issues"
+  },
+  "contributors": [
+    {
+      "name": "Cody Stoltman",
+      "email": "particlebanana@gmail.com"
+    },
+    {
+      "name": "Zolmeister",
+      "email": "zolikahan@gmail.com"
+    },
+    {
+      "name": "Robin Persson",
+      "email": "rprssn@gmail.com"
+    },
+    {
+      "name": "Ted Kulp",
+      "email": "github@wishy.org"
+    },
+    {
+      "name": "Andy Pham",
+      "email": "andyphamhung@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "@sailshq/lodash": "3.10.2",
+    "async": "2.0.1",
+    "mongodb": "2.1.20",
+    "validator": "4.5.1",
+    "waterline-cursor": "0.0.7",
+    "waterline-errors": "0.10.1"
+  },
+  "description": "Mongo DB adapter for Sails.js",
+  "devDependencies": {
+    "captains-log": "^1.0.2",
+    "mocha": "3.0.2",
+    "waterline-adapter-tests": "~0.12.1"
+  },
+  "homepage": "https://github.com/balderdashy/sails-mongo#readme",
   "keywords": [
     "mongo",
     "mongodb",
-    "adapter",
-    "sails",
-    "sails.js",
-    "waterline",
     "orm",
-    "database-adapter"
+    "waterline",
+    "sails"
   ],
   "license": "MIT",
-  "readmeFilename": "README.md",
+  "main": "./lib/adapter.js",
+  "name": "sails-mongo",
   "repository": {
     "type": "git",
     "url": "git://github.com/balderdashy/sails-mongo.git"
   },
-  "dependencies": {
-    "@sailshq/lodash": "^3.10.2",
-    "async": "2.0.1",
-<<<<<<< HEAD
-    "flaverr": "1.1.1",
-    "machine": "^13.0.0-17",
-    "mongodb": "2.2.25",
-    "qs": "6.4.0"
-=======
-    "mongodb": "2.2.22",
-    "validator": "4.5.1",
-    "waterline-cursor": "0.0.7",
-    "waterline-errors": "0.10.1"
->>>>>>> fca63b2c073aa037cc24d6c757e3c1978677113a
+  "scripts": {
+    "docker": "docker-compose run adapter bash",
+    "test": "make test"
   },
-  "devDependencies": {
-    "benchmark": "2.1.1",
-    "eslint": "3.5.0",
-    "mocha": "3.0.2",
-    "waterline": "^0.13.0-rc6",
-    "waterline-adapter-tests": "^1.0.0-6",
-    "waterline-utils": "^1.3.12"
-  },
+  "version": "0.12.2",
   "waterlineAdapter": {
+    "waterlineVersion": "~0.10.0",
     "interfaces": [
       "semantic",
       "queryable",
       "associations"
     ],
     "features": [
-      "unique"
+      "cross-adapter"
     ]
-  },
-  "machinepack": {
-    "friendlyName": "MongoDB",
-    "extendedDescription": "Uses the Node.js mongdb driver located at http://npmjs.com/package/mongodb",
-    "moreInfoUrl": "https://github.com/mongodb/node-mongodb-native",
-    "implements": [
-      "connectable",
-      "modeled",
-      "migratable"
-    ],
-    "machineDir": "lib/private/machines/",
-    "exportStyle": "dryDictionary",
-    "testsUrl": "https://travis-ci.org/balderdashy/sails-mongo"
   }
 }
